@@ -1,0 +1,8 @@
+{
+  "name": "@repo/tailwind-config",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./shared.css"
+  }
+}

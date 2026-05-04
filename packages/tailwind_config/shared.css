@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* 👇 ONE TIME define */
+@source "../../apps/**/*.{ts,tsx}";
+@source "../../packages/**/*.{ts,tsx}";

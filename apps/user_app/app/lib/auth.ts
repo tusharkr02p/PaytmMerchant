@@ -11,7 +11,7 @@ const authSchema = z.object({
   password: z.string().min(6, "Password to short"),
 });
 
-export const authOption: NextAuthOptions = {
+export const auuthOption: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",

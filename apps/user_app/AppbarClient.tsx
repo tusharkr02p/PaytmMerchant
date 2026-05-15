@@ -11,8 +11,11 @@ const AppbarClient = () => {
     const router = useRouter();
   return <div>
         <Appbar onSignin={signIn} onSignout={async()=>{
-            await signOut();
-            router.push("/api/auth/signin")
+             signOut({
+                callbackUrl:"/"
+             });
+
+            // router.push("/api/auth/signin")
         }} user={session.data?.user} />
         </div>
   

@@ -1,3 +1,8 @@
+
+import dotenv from "dotenv";
+dotenv.config();
+
+console.log("DB URL:", process.env.DATABASE_URL);
 import express from "express";
 import db from "@repo/db/cli"
 
@@ -5,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 
-app.post("./hdfcwebhook", async(req, res)=>{
+app.post("/hdfcwebhook", async(req, res)=>{
 
      const paymentInformation: {
         token: string;
@@ -52,4 +57,6 @@ app.post("./hdfcwebhook", async(req, res)=>{
 
 })
 
-app.listen(3003)
+app.listen(3003, () => {
+    console.log("Server running on port 3003");
+});
